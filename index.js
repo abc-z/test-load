@@ -10,9 +10,12 @@ window.addEventListener('load', function() {
 			.then(response => response.json())
 			.then(function (json) {
 				dict = json;
+				console.log('DICT2', (dict||'').length);	
 				console.timeEnd('load');
 				localStorage.setItem('word-ladder-dictionary', JSON.stringify(dict))
-			});
+			})
+			.catch(alert)	
+			;
 	} else  {
 		dict = JSON.parse(dict);
 		console.timeEnd('start')
