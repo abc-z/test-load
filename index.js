@@ -14,7 +14,7 @@ window.addEventListener('load', function() {
 			.then(function (json) {
 				dict = json;
 				console.timeEnd('load');
-				localStorage.setItem('word-ladder-dictionary', JSON.stringify(response.json))
+				localStorage.setItem('word-ladder-dictionary', JSON.stringify(dict))
 			});
 	} else  {
 		dict = JSON.parse(dict);
