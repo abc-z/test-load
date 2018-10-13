@@ -7,10 +7,7 @@ window.addEventListener('load', function() {
 
 		console.time('load');
 		fetch('dictionary.json')
-			.then(function (response){
-			 	response => response.json() 	
-				
-			})
+			.then(response => response.json())
 			.then(function (json) {
 				dict = json;
 				console.timeEnd('load');
